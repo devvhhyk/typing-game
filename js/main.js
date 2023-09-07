@@ -77,7 +77,7 @@ function checkMatch() {
         return;
       }
       score++;
-      score = 0;
+      // score = 0;
       scoreDisplay.innerText = score;
       time = GAME_TIME;
       const randomIndex = Math.floor(Math.random()* words.length);
