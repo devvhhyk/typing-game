@@ -33,7 +33,7 @@ function run() {
   wordInput.focus();
   scoreDisplay.innerText = 0;
   timeInterval = setInterval(countDown, 1000);
-  checkInterval = setInterval(checkStatus, 50);
+  checkInterval = setInterval(checkStatus, 150);
   buttonChange('게임중')
 }
 
@@ -77,11 +77,12 @@ function checkMatch() {
         return;
       }
       score++;
-      // score = 0;
       scoreDisplay.innerText = score;
       time = GAME_TIME;
       const randomIndex = Math.floor(Math.random() * words.length);
-      wordDisplay.innerText = words[randomIndex]
+      wordDisplay.innerText = words[randomIndex];
+    } else if (time === 0) {
+      wordInput.value = "";
     }
 }
 
