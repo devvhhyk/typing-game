@@ -80,7 +80,7 @@ function checkMatch() {
       // score = 0;
       scoreDisplay.innerText = score;
       time = GAME_TIME;
-      const randomIndex = Math.floor(Math.random()* words.length);
+      const randomIndex = Math.floor(Math.random() * words.length);
       wordDisplay.innerText = words[randomIndex]
     }
 }
